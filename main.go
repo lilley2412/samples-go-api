@@ -9,6 +9,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/gin-gonic/gin"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -24,6 +25,7 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "hello, world from KodaCD!")
+		spew.Dump(map[string]bool{"foo": true})
 	})
 
 	srv := &http.Server{
