@@ -23,7 +23,7 @@ func main() {
 	r.Use(requestLogger())
 
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "hello, world")
+		c.String(200, "hello, world from KodaCD!")
 	})
 
 	srv := &http.Server{
