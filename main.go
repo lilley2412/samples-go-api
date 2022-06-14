@@ -28,7 +28,7 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "hello, world from KodaCD!")
-		spew.Dump(map[string]bool{"foo": true})
+		// spew.Dump(map[string]bool{"foo": true})
 	})
 
 	srv := &http.Server{
