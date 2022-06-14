@@ -3,7 +3,6 @@ module github.com/lilley2412/samples-go-api
 go 1.18
 
 require (
-	github.com/davecgh/go-spew v1.1.1
 	github.com/gin-gonic/gin v1.8.1
 	github.com/rs/zerolog v1.27.0
 )
