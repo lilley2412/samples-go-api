@@ -23,6 +23,9 @@ func main() {
 	r.Use(gin.Recovery())
 	r.Use(requestLogger())
 
+	// lets make a code only change
+	_ = r
+
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "hello, world from KodaCD!")
 		spew.Dump(map[string]bool{"foo": true})
