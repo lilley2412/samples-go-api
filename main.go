@@ -23,7 +23,7 @@ func main() {
 	r.Use(requestLogger())
 
 	// lets make a code only change
-	_ = r
+	// _ = r
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "hello, world from KodaCD!")
