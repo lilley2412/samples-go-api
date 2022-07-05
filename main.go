@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/minio/minio-go"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
@@ -24,6 +25,8 @@ func main() {
 
 	// lets make a code only change
 	// _ = r
+	// lets make a go mod change
+	minio.New("foo", "foo", "foo", true)
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "hello, world from KodaCD!")
