@@ -1,3 +1,8 @@
-variables:
-  foo: baz
-  baz: foo
+name: simple
+
+tasks:
+  hello:
+    image: ubuntu
+    script: |
+      printf "hello, world\n"
+      
