@@ -5,4 +5,6 @@ tasks:
     image: ubuntu
     script: |
       printf "hello, world\n"
+      pwd
+      ls -lah
       
