@@ -1,7 +1,7 @@
 name: simple
 
 tasks:
-  hello:
+  - name: hello
     image: ubuntu
     script: |
       printf "hello, world\n"
