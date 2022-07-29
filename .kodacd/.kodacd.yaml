@@ -1,10 +1,39 @@
-name: simple
 
-tasks:
-  - name: hello
-    image: ubuntu
-    script: |
-      printf "hello, world\n"
-      pwd
-      ls -lah
+runs:
+  .dev:
+    variables:
+      HOST: dev-host
       
+  dev-build:
+    extends:
+    - .dev
+    tasks:
+      build:
+        image: ubuntu
+        script: echo "hello, $(HOST)"
+
+  # .test:
+  #   variables:
+  #     HOST: test-host
+
+  # .build:
+  #   tasks:
+  #   - name: build
+  #   - name: scan
+  #     script:
+  #       echo "hey $(HOST)"
+  #   - name: artifact
+
+  # dev-ci:
+  #   extends:
+  #   - .dev
+  #   - .build
+  #   tasks:
+  #     some-extra-dev-thing:
+  #       runAfter:
+  #       - build
+
+  # test-ci:
+  #   extends:
+  #   - .test
+  #   - .build
