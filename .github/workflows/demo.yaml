@@ -1,6 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
+
   actions-demo:
     runs-on: [self-hosted,ubuntu]
     steps:
@@ -15,6 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
   actions-demo-2:
     runs-on: [self-hosted,ubuntu]
     steps:
