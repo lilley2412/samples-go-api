@@ -10,7 +10,8 @@ jobs:
       - name: uname
         run: |
           uname -r
-          env
+          env | grep RUNNER
+
 
     # steps:
     #   - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
