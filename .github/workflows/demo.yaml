@@ -4,12 +4,14 @@ jobs:
 
   actions-demo:
     runs-on: [self-hosted,ubuntu]
-    container:
-      image: node:14.16
+    # container:
+    #   image: node:14.16
     steps:
       - name: uname
-        run: uname -r
-        
+        run: |
+          uname -r
+          env
+
     # steps:
     #   - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     #   - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
