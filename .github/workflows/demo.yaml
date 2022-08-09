@@ -3,7 +3,7 @@ on: [push]
 jobs:
 
   actions-demo:
-    runs-on: [self-hosted,image:node:14.16]
+    runs-on: [self-hosted,img-ubuntu-18.04]
     # container:
     #   image: node:14.16
     steps:
