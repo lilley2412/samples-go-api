@@ -11,13 +11,10 @@ runs:
       build:
         image: ubuntu
         script: |
-          echo "hello, $(HOST)\n"
-
-          echo "all repo files:\n"
-
-          for f in $(bashArray(files("pkg/.*")))
+          echo "all repo files:"
+          for f in $(bashArray(files()))
           do
-            echo "${f}"
+            echo "    ${f}"
           done
 
   # .test:
