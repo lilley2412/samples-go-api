@@ -10,7 +10,15 @@ runs:
     tasks:
       build:
         image: ubuntu
-        script: echo "hello, $(HOST)"
+        script: |
+          echo "hello, $(HOST)\n"
+
+          echo "all repo files:\n"
+
+          for f in $(bashArray(files("pkg/.*")))
+          do
+            echo "${f}"
+          done
 
   # .test:
   #   variables:
