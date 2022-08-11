@@ -4,9 +4,10 @@ runs:
     variables:
       HOST: dev-host
       
-  dev-build:
+  dev:
     extends:
     - .dev
+    clone: {}
     tasks:
       ben-dev:
         image: bitnami/kubectl:latest
