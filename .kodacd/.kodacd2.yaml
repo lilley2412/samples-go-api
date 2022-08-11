@@ -8,16 +8,20 @@ runs:
     extends:
     - .dev
     tasks:
-      build:
-        image: ubuntu
+      ben-dev:
+        image: bitnami/kubectl:latest
         script: |
-          echo "all repo files:"
-          for f in $(bashArray(files()))
-          do
-            echo "    ${f}"
-          done
+          kubectl get ns
+      # build:
+      #   image: ubuntu
+      #   script: |
+      #     echo "all repo files:"
+      #     for f in $(bashArray(files()))
+      #     do
+      #       echo "    ${f}"
+      #     done
 
-          echo "test this"
+      #     echo "test this"
 
   # .test:
   #   variables:
