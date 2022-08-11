@@ -12,7 +12,8 @@ runs:
       ben-dev:
         image: bitnami/kubectl:latest
         script: |
-          kubectl get ns
+          curl google.com
+          # kubectl get ns
       # build:
       #   image: ubuntu
       #   script: |
