@@ -17,6 +17,8 @@ runs:
             echo "    ${f}"
           done
 
+          echo "test this"
+
   # .test:
   #   variables:
   #     HOST: test-host
