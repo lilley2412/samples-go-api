@@ -8,12 +8,20 @@ runs:
     extends:
     - .dev
     clone: {}
+    # roles:
+    # - name: k8s-reader
+    # - name: aws-s3-reader
+    # needs:
+    #   egress:
+    #   - 0.0.0.0/0
+    #   serviceAccount:
+    #   - superadmin
     tasks:
       ben-dev:
         image: bitnami/kubectl:latest
         script: |
           curl google.com
-          # kubectl get ns
+          kubectl get ns
       # build:
       #   image: ubuntu
       #   script: |
