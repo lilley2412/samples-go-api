@@ -3,9 +3,10 @@ runs:
   hello-world:
     tasks:
       hello:
-        taskRef: curl # https://github.com/tektoncd/catalog/blob/main/task/curl/0.1/curl.yaml
-        params:
-          url: https://google.com
+        taskRef:
+          name: curl # https://github.com/tektoncd/catalog/blob/main/task/curl/0.1/curl.yaml
+          params:
+            url: https://google.com
 
   # .dev:
   #   variables:
