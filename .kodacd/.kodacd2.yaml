@@ -3,7 +3,7 @@ runs:
   hello-world:
     tasks:
       hello:
-        image: sleep
+        image: ubuntu
         script: printf "hello, world\n"
 
   # .dev:
