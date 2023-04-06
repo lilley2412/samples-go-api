@@ -8,7 +8,7 @@ runs:
           params:
             url: https://google.com
             options:
-            - -L
+            - "-L"
 
       # goodbye:
       #   runAfter:
