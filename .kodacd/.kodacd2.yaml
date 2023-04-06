@@ -7,7 +7,8 @@ runs:
           name: curl # https://github.com/tektoncd/catalog/blob/main/task/curl/0.1/curl.yaml
           params:
             url: https://google.com
-            options: "-L"
+            options:
+            - -L
 
       # goodbye:
       #   runAfter:
