@@ -8,7 +8,9 @@ runs:
           params:
             url: https://google.com
 
-
+      goodbye:
+        image: ubuntu
+        script: printf "goodbye"
   # .dev:
   #   variables:
   #     HOST: dev-host
