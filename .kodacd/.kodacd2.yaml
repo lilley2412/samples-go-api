@@ -9,6 +9,7 @@ runs:
             url: https://google.com
 
       goodbye:
+        finally: true
         image: ubuntu
         script: printf "goodbye"
   # .dev:
