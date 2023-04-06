@@ -16,7 +16,7 @@ runs:
         - build
         image: ubuntu
         script: |
-          ls -lah $(tasks.build.results.IMAGE_TARBALL)
+          ls -lah /workspace/source
 
       # hello:
       #   taskRef:
