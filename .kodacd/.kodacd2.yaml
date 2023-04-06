@@ -1,24 +1,22 @@
 
 runs:
   image-build:
-    clone: {}
-
     tasks:
-      # build:
-      #   taskRef:
-      #     name: kaniko
-      #     params:
-      #       IMAGE: kodacd/sample-go-api
-      #     workspaces:
-      #     - taskWorkspace: source
-      #       sourceWorkspace: $(KODACD_BUILD_WORKSPACE)
-      #       # subPath: ""
+      build:
+        taskRef:
+          name: kaniko
+          params:
+            IMAGE: kodacd/sample-go-api
+          workspaces:
+          - taskWorkspace: source
+            sourceWorkspace: $(KODACD_BUILD_WORKSPACE)
+            # subPath: ""
       debug:
-        # runAfter:
-        # - build
+        runAfter:
+        - build
         image: ubuntu
         script: |
-          ls -lah /kodacd/cache
+          ls -lah /kodacd/build
 
       # hello:
       #   taskRef:
