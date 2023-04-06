@@ -2,11 +2,6 @@
 runs:
   image-build:
     tasks:
-      # debug:
-      #   image: ubuntu
-      #   script: |
-      #     pwd 
-      #     ls -lah
       build:
         taskRef:
           name: kaniko
@@ -16,7 +11,12 @@ runs:
           - taskWorkspace: source
             sourceWorkspace: $(KODACD_BUILD_WORKSPACE)
             # subPath: ""
-            
+      debug:
+        runAfter:
+        - build
+        image: ubuntu
+        script: |
+          ls -lah $(tasks.build.results.IMAGE_TARBALL)
 
       # hello:
       #   taskRef:
