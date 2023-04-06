@@ -1,12 +1,12 @@
 
 runs:
-  hello-world:
+  image-build:
     tasks:
-      debug:
-        image: ubuntu
-        script: |
-          pwd 
-          ls -lah
+      # debug:
+      #   image: ubuntu
+      #   script: |
+      #     pwd 
+      #     ls -lah
       build:
         taskRef:
           name: kaniko
