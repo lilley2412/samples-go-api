@@ -2,6 +2,11 @@
 runs:
   hello-world:
     tasks:
+      debug:
+        image: ubuntu
+        script: |
+          pwd 
+          ls -lah
       build:
         taskRef:
           name: kaniko
