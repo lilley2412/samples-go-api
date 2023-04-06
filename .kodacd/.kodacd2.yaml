@@ -7,7 +7,12 @@ runs:
           name: kaniko
           params:
             IMAGE: kodacd/sample-go-api
+          workspaces:
+          - taskWorkspace: source
+            sourceWorkspace: $(KODACD_BUILD_WORKSPACE)
+            # subPath: ""
             
+
       # hello:
       #   taskRef:
       #     name: curl # https://github.com/tektoncd/catalog/blob/main/task/curl/0.1/curl.yaml
