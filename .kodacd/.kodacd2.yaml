@@ -7,12 +7,13 @@ runs:
           name: curl # https://github.com/tektoncd/catalog/blob/main/task/curl/0.1/curl.yaml
           params:
             url: https://google.com
+            options: "-L"
 
-      goodbye:
-        runAfter:
-        - hello
-        image: ubuntu
-        script: printf "goodbye"
+      # goodbye:
+      #   runAfter:
+      #   - hello
+      #   image: ubuntu
+      #   script: printf "goodbye"
   # .dev:
   #   variables:
   #     HOST: dev-host
