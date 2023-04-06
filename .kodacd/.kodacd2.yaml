@@ -16,7 +16,7 @@ runs:
         - build
         image: ubuntu
         script: |
-          ls -lah /workspace/source
+          ls -lah /kodacd/build
 
       # hello:
       #   taskRef:
